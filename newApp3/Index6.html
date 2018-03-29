@@ -1,0 +1,781 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Initium Hub</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="generator" content="Codeply">-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link href="css/font-mfizz.css" rel="stylesheet" />
+    <link href="css/introjs.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style type="text/css">
+        #btnSubmit {
+            width: 100px;
+        }
+
+        #one {
+            /*background-image:url('assets/geeks.jpg')*/
+            height: auto !important;
+        }
+
+        #btnHeader {
+            color: ghostwhite;
+        }
+
+        .introjs-tooltiptext {
+            color: black;
+        }
+
+        .row.no-gutter {
+            margin-left: 14px;
+        }
+
+        .col-lg-4.col-sm-6 {
+            width: 345px;
+            padding-bottom: 35px;
+        }
+
+        .col-lg-4.col-sm-6 {
+            display: inline-block;
+            width: 25%;
+        }
+     .carousel-image {
+            display: block;
+            margin: auto;
+        }
+       
+        @media screen and (max-width: 420px) {
+            .col-lg-4.col-sm-6 {
+                width: 33%;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            .col-lg-4.col-sm-6 {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand page-scroll" data-step="1" data-intro="You look like a first time user. Click here any time to return to the home page" href="#"><i class="ion-gear-b" src="favicon.ico"></i> Initium</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#one">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#two">Highlights</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three">Gallery</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#four">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#last">Contact</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" title="About initium hub" href="#aboutModal">About</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <form class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li>
+                        <p class="navbar-btn">
+                            <a href="Register.aspx" class="btn btn-default">Contact Us</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 id="city">Lorem Ipsum</h1>
+                <h4 id="cityHelp">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at efficitur orci.
+                    Nulla vestibulum urna in felis laoreet porttitor. Quisque egestas mollis iaculis.
+                </h4>
+                <hr>
+                <a href="#video-background" data-intro="click this button to toggle video or refresh this page to get a new video background based on current temperature" data-step="2" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#two" data-intro="Click here to scroll to the next section" data-step="3" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+            </div>
+        </div>
+        <video autoplay="" muted="muted" loop="loop" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="assets/geeks.jpg" id="video-background">
+            <source src="assets/862013302.mp4" type="video/mp4">Your browser does not support the video tag. Please upgrade your browser.
+        </video>
+    </header>
+    <!--<section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+                    <h2 id="btnHeader" class="margin-top-0 text-primary">Enter a valid name and email as shown in the placeholders to enable the button.</h2>
+                    <br>
+                    <form class="list-inline">
+                        <div class="form-group">
+                            <label class="sr-only">Name</label>
+                            <input type="text" id="txtName" class="form-control form-contorl-lg" placeholder="Jane Doe" data-intro="Enter your name as shown in the place holder i.e Firstname Lastname" data-step="4">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Email</label>
+                            <input type="email" id="txtEmail" class="form-control form-contorl-lg" placeholder="Jane@Doe.com" data-intro="Enter your email as shown in the place holder i.e user@domain.com" data-step="5">
+                        </div>
+
+                        <button type="button" id="btnSubmit" onclick="btnClicked()" data-intro="Now that you have enabled the button, click on it and see the text above this form change" data-step="6" disabled="disabled" class="btn btn-success btn-lg">Okay!</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <section id="two" data-intro="Hmm... A carousel ... to be updated with dynamic content soon" data-step="4">
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" id="carouselIndicator">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div id="carouselInner" class="carousel-inner">
+                <div class="item active">
+                    <img class="carousel-image" src="img/sticker-mule-199257.jpg" alt="mule">
+                    <div class="carousel-caption">
+                        <h3>Trending in Instagram</h3>
+                        <p> The following pictures are currently trending in your area</p>
+                    </div>
+                </div>
+
+                <!--<div class="item">
+                    <img src="img/josh-calabrese-527813.jpg" alt="Chicago">
+                    <div class="carousel-caption">
+                        <h3>Curabitur malesuada</h3>
+                        <p>Phasellus ultrices diam in enim dapibus aliquam.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="img/workshop.jpeg" alt="New York">
+                    <div class="carousel-caption">
+                        <h3>Donec sodales</h3>
+                        <p>Maecenas vitae malesuada elit.</p>
+                    </div>
+                </div>-->
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </section>
+    <section id="three" class=" text-center">
+        <div class="container-fluid ">
+            <h2 class="text-primary" data-intro="Yay! BootStrap cards. Seeing most liked pics that has been tagged with your city name on instagram. This feed is from a proxy ig feed. :(" data-step="5">See what people are posting about your city on instagram!</h2>
+
+            <div id="insta" class="row no-gutter">
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark" id="four">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 class="text-primary">Aenean lacus turpis, pellentesque condimentum felis fermentum, vehicula pulvinar erat.</h2>
+                <p>
+                    Fusce gravida augue id gravida mattis. Nulla pulvinar arcu massa, lobortis vestibulum enim semper eu. Aliquam ut eros sed erat porta blandit.
+                    Vestibulum ac imperdiet nibh. Aenean semper turpis vel vulputate viverra. Cras venenatis tortor eu interdum blandit.
+                    Mauris venenatis viverra ultrices. Mauris sit amet ultrices arcu. Donec sem sem, varius ac accumsan semper, maximus id mi.
+                    In pellentesque lectus quis ligula eleifend dictum. Suspendisse at sodales erat
+                </p>
+            </div>
+            <br>
+            <hr />
+            <br>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row" data-intro="Don't know what those icons at the bottom mean? Just point your mouse over them after this tour!" data-step="6">
+                        <h6 class="wide-space text-center">This site is built and hosted using</h6>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-html5-outline" title=""></i>
+                        </div>
+
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-javascript-outline" title="javascript"></i>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg ion-social-css3-outline" title="css 3"></i>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 text-center">
+                            <i class="icon-lg icon-aws" title="aws"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <section id="last">
+        <div class="container">
+
+            <div id="card" style="height:580px">
+                <div class="front">
+
+
+                    <div class="col-lg-10 col-lg-offset-1 text-center ">
+                        <form class="contact-form row" id="subscribeForm" data-intro="Fill out this form, enter a real email(we dont spam). You will just get a one time email(that too only after you verify the message and confirm it)" data-step="7">
+                            <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>q
+                            <hr class="primary">
+                            <p>We love feedback. Fill out the form below and we'll get back to you as soon as possible.</p>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" id="txtUserName" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" id="txtEmail1" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input type="text" id="txtPhone" maxlength="10" class="form-control" placeholder="Phone">
+                            </div>
+                            <div class="col-md-12">
+                                <label></label>
+                                <textarea class="form-control" maxlength="1500" id="txtMessage" rows="9" placeholder="Your message here.."></textarea>
+                            </div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <label></label>
+                                <button type="button" data-toggle="modal" onclick="sendSubscriptions()" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="back" style="margin-bottom:0px">
+                    <h1 class="Display-1" id="pLead"></h1>
+                    <blockquote class="blockquote">
+                        <p class="mb-0"><pre id="pMessage"></pre></p>
+                    </blockquote>
+                    <p id="pHelper" style="margin-bottom:0px"></p>
+
+
+                    <p id="pTrail">
+
+                    </p>
+
+                    <p style="margin-bottom:0px"> <small>You will get a one time e-mail of your message.</small></p>
+
+                    <button class="btn btn-info" id="btnSubscribe" onclick="sendEmail()">Email me!</button>
+                </div>
+
+
+            </div>
+
+    </section>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="charts/userVisits.aspx" data-intro="Finally dont forget to check out these charts powered by javascript and asmx services. Dont be surprised if you see your city here " data-step="8">Metrics</a></li>
+                        <!-- <li><a href="http://initium.initiumhub.com" data-intro="Check out htis site being built using ASP.NET MVC" data-step="9">Blog</a></li>-->
+
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="Register.aspx">Contact Us</a></li>
+                        <li><a href="http://initium.initiumhub.com" data-intro="Check out htis site being built using ASP.NET MVC" data-step="9">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted</h4>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Tell us your email">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" type="button">Subscribe for updates</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right">
+                    <h4>Follow</h4>
+                    <ul class="list-inline">
+                        <li><a rel="nofollow" href="http://www.twitter.com" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
+                        <li><a rel="nofollow" href="http://www.facebook.com" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
+                        <li><a rel="nofollow" href="http://www.instagram.com" title="Instagram"><i class="icon-lg ion-social-instagram-outline"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br />
+
+        </div>
+    </footer>
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <img src="" id="galleryImage" class="img-responsive" />
+                    <p>
+
+                        <a href="http://www.google.com">www</a> <br />
+                        <button id="divtest2" class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="text-center">Thank you for visiting</h2>
+                    <h5 class="text-center">
+                        Sed iaculis est sem, vitae ultricies elit consectetur id. Suspendisse dictum velit at tellus hendrerit ullamcorper. Donec tempus varius molestie.
+                    </h5>
+                    <p class="text-justify">
+                        Curabitur malesuada sagittis nibh, vel aliquet erat mollis eget. Proin porta, nunc et scelerisque ultricies, leo risus bibendum lectus, ac vulputate neque magna eget nunc.
+                        Phasellus ultrices diam in enim dapibus aliquam. Integer placerat posuere blandit. Aliquam lobortis augue ut enim mattis, quis ultrices sapien vehicula. Cras eget molestie tortor.
+                        Nullam a blandit tellus, ut tempor metus. Maecenas eleifend ipsum ex, in laoreet odio ultrices et. Sed iaculis est sem, vitae ultricies elit consectetur id.
+                        Suspendisse dictum velit at tellus hendrerit ullamcorper. Donec tempus varius molestie.
+                    </p>
+                    <p class="text-center"><a href="index.html">Pellentesque sem metus, condimentum eu mattis vel</a></p>
+                    <br />
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="text-center">Nice Job!</h2>
+                    <p class="text-center">You clicked the button, but it doesn't actually go anywhere because this is only a demo.</p>
+                    <p class="text-center"><a href="">Maecenas interdum dapibus orci, a gravida ante elementum non. Ut tempor metus nisl, vel aliquam sem auctor et.</a></p>
+                    <br />
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="alertModal2" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="text-center">Nice Job!</h2>
+                    <p class="text-center">
+                        Donec lacinia dui erat, vel accumsan urna porta quis.
+                        In placerat tristique urna, id laoreet enim iaculis quis. In malesuada metus a fringilla posuere.
+                    </p>
+
+                    <br />
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="js/flip.js"></script>
+    <script src="js/intro.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="scripts/validateHomeFields.js"></script>
+    <script src="scripts/homePageScripts.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+            introJs().start();
+            if (isIOS) {
+                $('#toggleVideo').trigger('click');
+                //$("#toggleVideo").toggle();
+
+            } else {
+
+                // Use HTML5 video
+                //document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+            }
+            console.log('doc ready');
+            $.ajax({
+                type: 'POST',
+                url: 'services.asmx/GetUserCity',
+                data: "{window: '" + 'sample' + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (locationInformation) {
+                    // alert(r);
+console.log('Location');
+                    console.log(locationInformation);
+                    //var userMessage = { Name: r.d.Name, Email: r.d.Email, Message: r.d.userMessage };
+                    //$('.back').text('Email sent to ' + globalEmail + '. Please make sure to check your spam folder.');
+                    //$('.back').css('font-size', '42px');
+                    // console.log(userMessage);
+                    $("#city").text('You are located near ' + locationInformation.d.City + ', ' + locationInformation.d.StateCode + ', ' + locationInformation.d.CountryCode);
+                    $("#cityHelp").text('This information is from http://www.freegeoip.net.');
+                    changeImages(locationInformation.d.City.toLowerCase().split(" ")[0]); changeCarousel(locationInformation.d);
+                    getWeather(locationInformation.d);
+                   // getTrends(locationInformation);
+                    //console.log(r.d);
+
+                },
+                error: function (e) {
+                    //alert(e);
+                    console.log(e);
+                }
+            });
+
+
+
+
+
+
+
+        });
+
+
+        function changeCarousel(location) {
+            console.log('carousel');
+           // console.log(location.WOEID);
+            var WOEID = location.WOEID;
+            $.ajax({
+                url: "https://igpi.ga/explore/locations/" + WOEID + "/?__a=1",
+                dataType: "jsonp",
+                data: {
+                    count: 10
+                },
+                success: function (json) {
+                    console.log('jsonp');
+                    console.log(json.graphql.location.edge_location_to_top_posts.edges);
+                    for (var i in json.graphql.location.edge_location_to_top_posts.edges) {
+                        var img = document.createElement("IMG");
+                        var carouselItem = "<li data-target=\"#myCarousel\" data-slide-to=\" " + i + "\"></li>";
+                        $('#carouselIndicator').append(carouselItem);
+                        var thisNode = json.graphql.location.edge_location_to_top_posts.edges[i].node;
+                        console.log('CarList'); console.log(thisNode);
+                        var tags = thisNode.edge_media_to_caption.edges[0];
+                        var hashTags;
+                        if (tags !== undefined) {
+                            hashTags = tags.node.text;
+                        }
+                        else {
+                            hashTags = 'No # tag';
+                        }
+                        console.log(tags);
+                        var carousel = "<div class=\"item a\"><img class=\"carousel-image\" src = \"" + thisNode.display_url + "\"\><div class=\"carousel-caption\"><h3><a href=\"https://www.instagram.com/p/" + thisNode.shortcode + "\">" + hashTags + "<a/></h3></div></div>" //     <div class=\"carousel-caption\"><h3><a href=\"https://www.instagram.com/p/" + json.graphql.location.edge_location_to_top_posts.edges[i].node.shortcode + "\">" + json.graphql.location.edge_location_to_top_posts.edges[i].node.display_url + alt= \"mule\" ><div class=\"carousel-caption\"><h3><a href=\"https://www.instagram.com/p/" + json.graphql.location.edge_location_to_top_posts.edges[i].node.edge_media_to_caption.edges[0] + "</a></h3><p> Maecenas eleifend ipsum ex, in laoreet odio ultrices et.</p></div></div >";
+                       
+                        $('#carouselInner').append(carousel);
+                        img.src = json.graphql.location.edge_location_to_top_posts.edges[i].node.display_url;
+                        img.width = '320';
+                        document.body.appendChild(img);
+                    }
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+        function getWeather(location) {
+            //city = city + '';
+            //city = city.split(',');
+            //city = city[0];
+            console.log(location);
+            var city = location.City + ',' + location.State + ',' + location.Country;
+            var l = document.getElementById('video-background');
+            console.log(l);
+            console.log('c:' + city);
+            $.ajax({
+                type: 'POST',
+                url: 'services.asmx/GetWeather',
+                data: "{city: '" + city + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (r) {
+                    // alert(r);
+                    // console.log(r);
+                    //var userMessage = { Name: r.d.Name, Email: r.d.Email, Message: r.d.userMessage };
+                    //$('.back').text('Email sent to ' + globalEmail + '. Please make sure to check your spam folder.');
+                    //$('.back').css('font-size', '42px');
+                    // console.log(userMessage);
+                   // $("#city").text('You are located near ' + r.d);
+                    //$("#cityHelp").text('This information is from http://www.freegeoip.net.');
+                    //getWeather(r.d);
+                    console.log('weather obj');
+                    console.log(r);
+                    //console.log(r.d);
+                    console.log('video change to ' + r.d.videoPath);
+                    $("#cityHelp").css('color', 'lavender');
+                    l.setAttribute('src', r.d.videoPath);
+                    if (r.d.currentTemp < 45) {
+                        console.log('snow');
+                        $("#city").css('color', 'darkgrey');
+                        $("#cityHelp").css('color', 'lavender');
+                    }
+
+                    $("#cityHelp").text('Current weather condition: ' + r.d.description + '.Your current temperature is: ' + r.d.currentTemp + 'F.' + ' This information is from http://www.freegeoip.net.& http://www.accuweather.com/ ');
+
+                },
+                error: function (e) {
+                    //alert(e);
+$("#cityHelp").text('You are here on a bad day. Something went wrong with weather API, so you have to look at the boring background video for now. Check back later to see the weather and a dynamic video background based on the weather. I swear it was working before');
+         $("#cityHelp").css('color','black');  $("#cityHelp").css('font-weight','bold');          console.log(e);
+                }
+            });
+        }
+
+var topImages = [];
+	function changeImages(city){
+console.log('changeImages');
+console.log(city);
+var arr = [];
+ $.ajax({
+
+url: "https://igpi.ga/explore/tags/"+city+"/media",
+
+      dataType: "jsonp",
+
+      data: {
+        count: 100     },
+
+      success: function(json) {
+
+       for (var i in json.posts) {
+
+//console.log(i);
+        var obj = {
+
+		hashTags : json.posts[i].edge_media_to_caption.edges[0],
+
+
+		displayUrl : json.posts[i].display_url,
+		likedBy : json.posts[i].edge_liked_by.count,
+		thumbNail : json.posts[i].thumbnail_resources[2].src,
+
+
+		shortCode:json.posts[i].shortcode
+		}
+	arr.push(obj);
+       }
+
+
+
+	  arr = sortByKey(arr, 'likedBy');
+console.log('array len');
+//console.log(arr);
+
+//console.log(container);
+var max = json.posts.length; var min = Math.round(max/6);
+var limit=Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(limit);
+for(var i=0;i<limit;i++){
+topImages.push(arr[i]);
+createGalleryBox();
+//console.log($('#insta'));
+
+console.log('After childeren');
+//console.log($('#insta')[0].childNodes[i+1].childNodes[0].childNodes[0].src);
+$('#insta')[0].childNodes[i+1].childNodes[0].childNodes[0].src= arr[i].thumbNail;
+$('#insta')[0].childNodes[i+1].childNodes[0].attributes[3].nodeValue=arr[i].displayUrl;
+var k =($('#three').children().children().find("a")[i].attributes['data-src'].nodeValue);
+
+//console.log(k);
+}
+    }
+
+});
+
+function createGalleryBox(){
+var galleryBlock ='<div class="col-lg-4 col-sm-6"><a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="./assets/colors.jpg"><img src="./assets/colors.jpg" class="img-responsive" alt="Image 6"><div class="gallery-box-caption"><div class="gallery-box-content"><div><i class="icon-lg ion-ios-search"></i></div></div></div></a></div>';
+$('#insta').append(galleryBlock);
+
+}
+
+}
+function sortByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+       
+	return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+    });
+}
+        function getTrends(location) {
+            //city = city + '';
+            //city = city.split(',');
+            //city = city[0];
+            //console.log(location);
+            var city = location.City + ',' + location.State + ',' + location.Country;
+            //console.log('locationInformation:' + city);
+            //console.log(location);
+            var location = location.d;
+            delete location['__type'];
+            //console.log('p del:');
+            //console.log(location);
+
+
+            $.ajax({
+                type: 'POST',
+                url: 'services.asmx/GetTrends',
+                data: "{locationInformation: '" + JSON.stringify(location) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (r) {
+                    // alert(r);
+                    // console.log(r);
+                    //var userMessage = { Name: r.d.Name, Email: r.d.Email, Message: r.d.userMessage };
+                    //$('.back').text('Email sent to ' + globalEmail + '. Please make sure to check your spam folder.');
+                    //$('.back').css('font-size', '42px');
+                    // console.log(userMessage);
+                    // $("#city").text('You are located near ' + r.d);
+                    //$("#cityHelp").text('This information is from http://www.freegeoip.net.');
+                    //getWeather(r.d);
+                    //console.log(r);
+                   // console.log(r.d);
+                    $("#cityHelp").css('color', 'lavender');
+                    $("#cityHelp").text('Current weather condition: ' + r.d.description + '.Your current temperature is: ' + r.d.currentTemp + 'F. Max: ' + r.d.maxTemp + 'F. Min: ' + r.d.minTemp + 'F. This information is from http://www.freegeoip.net.& http://www.openweathermap.org/ ');
+
+                },
+                error: function (e) {
+                    //alert(e);
+                    //console.log('error trends');
+                    //console.log(e);
+                }
+            });
+        }
+
+
+
+//JQUERY to detect div property changes
+(function() {
+    var ev = new $.Event('display'),
+        orig = $.fn.css;
+    $.fn.css = function() {
+        orig.apply(this, arguments);
+        $(this).trigger(ev);
+    }
+})();
+
+$('#galleryModal').bind('display', function(e) {
+
+//alert( $(this).attr('style'));
+console.log($(this).attr('style'));
+if($(this).attr('style').indexOf('display: block') !== -1){
+//alert('r');
+console.log('imgAddss =')
+var slider = document.getElementById('galleryModal');
+    //imgs = slider.getElementsByTagName('img'), selected = images = document.querySelectorAll('#slider img');
+//console.log(slider); //console.log(selected);
+
+var imgAddress = $(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[1].currentSrc;
+//alert(imgAddress);
+function search(nameKey, myArray){
+console.log('search called');
+    for (var i=0; i < myArray.length; i++) {
+console.log(myArray[i].displayUrl + nameKey);
+        if (myArray[i].displayUrl=== nameKey) {
+console.log('match found');
+console.log(myArray[i]);
+return myArray[i];
+        }
+    }
+}
+//debugger;
+//console.log('imgAddress='+imgAddress);
+var img1 = search(imgAddress,topImages);
+console.log('img');
+console.log(img1);
+//var selectedRoles = topImages .find(function(x) { return x.displayUrl=== imgAddress; });
+//console.log(selectedRoles );
+console.log($(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[1].currentSrc);
+//var resultObject = topImages .find(o => o.displayUrl === imgAddress);
+//console.log($('#galleryModal'));
+//console.log$(this);
+if(img1.hashTags !== null){
+$(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerText = img1.hashTags.node.text;
+}
+else{
+$(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerText = 'No #Tags';
+}
+
+$(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].attributes[0].nodeValue ="https://www.instagram.com/p/"+img1.shortCode+"/";
+//console.log($(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].attributes[0].nodeValue);
+//$('#galleryModal')[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].innerText = img1.hashTags;
+//$(#galleryModal)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].attributes[0].nodeValue ="https://www.instagram.com/p/"+resultObject.shortCode+"/";
+//console.log($(this)[0].childNodes[1].childNodes[1].childNodes[1].childNodes[3].childNodes[1].attributes[0].nodeValue);
+}
+
+});
+
+
+
+    </script>
+    <!--<script src="scripts/homeScripts.min.js"></script>-->
+</body>
+</html>

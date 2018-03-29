@@ -42,12 +42,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -66,7 +70,65 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\862013302.mp4" />
+    <Content Include="assets\bridge.jpg" />
+    <Content Include="assets\geeks.jpg" />
+    <Content Include="assets\VideoBG\Rain\Cold-stream\Cold-stream.jpg" />
+    <Content Include="assets\VideoBG\Rain\Cold-stream\Cold-stream.mp4" />
+    <Content Include="assets\VideoBG\Snow\Fency-Snow\Fency-Snow.jpg" />
+    <Content Include="assets\VideoBG\Snow\Fency-Snow\Fency-Snow.mp4" />
+    <Content Include="assets\VideoBG\Snow\Frozen_stream\Frozen_stream .mp4" />
+    <Content Include="assets\VideoBG\Snow\Frozen_stream\Frozen_stream.jpg" />
+    <Content Include="assets\VideoBG\Snow\It-Snowed\It-Snowed.jpg" />
+    <Content Include="assets\VideoBG\Snow\It-Snowed\It-Snowed.mp4" />
+    <Content Include="assets\VideoBG\Snow\Mt_Baker\Mt_Baker.jpg" />
+    <Content Include="assets\VideoBG\Snow\Mt_Baker\Mt_Baker.mp4" />
+    <Content Include="assets\VideoBG\Snow\Ski-Day\Ski-Day.jpg" />
+    <Content Include="assets\VideoBG\Snow\Ski-Day\Ski-Day.mp4" />
+    <Content Include="assets\VideoBG\Snow\Snow-Bricks\Snow-Bricks.jpg" />
+    <Content Include="assets\VideoBG\Snow\Snow-Bricks\Snow-Bricks.mp4" />
+    <Content Include="assets\VideoBG\Snow\Snow-Dog\Snow-Dog.jpg" />
+    <Content Include="assets\VideoBG\Snow\Snow-Dog\Snow-Dog.mp4" />
+    <Content Include="assets\VideoBG\Snow\Snowy-Bench\Snowy-Bench.jpg" />
+    <Content Include="assets\VideoBG\Snow\Snowy-Bench\Snowy-Bench.mp4" />
+    <Content Include="assets\VideoBG\Summer\Desert-Watching\Desert-Watching.jpg" />
+    <Content Include="assets\VideoBG\Summer\Desert-Watching\Desert-Watching.mp4" />
+    <Content Include="assets\VideoBG\Summer\Desert_Storm\Desert_Storm.jpg" />
+    <Content Include="assets\VideoBG\Summer\Desert_Storm\Desert_Storm.mp4" />
+    <Content Include="assets\VideoBG\Summer\Friday_Afternoon\Friday_Afternoon.jpg" />
+    <Content Include="assets\VideoBG\Summer\Friday_Afternoon\Friday_Afternoon.mp4" />
+    <Content Include="assets\VideoBG\Summer\Summer_Place_Flyby\Summer_Place_Flyby.jpg" />
+    <Content Include="assets\VideoBG\Summer\Summer_Place_Flyby\Summer_Place_Flyby.mp4" />
+    <Content Include="charts\userVisits.aspx" />
+    <Content Include="css\font-mfizz.css" />
+    <Content Include="css\font-mfizz.svg" />
+    <Content Include="css\introjs.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="flipTest.aspx" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="css\font-mfizz.eot" />
+    <Content Include="css\font-mfizz.ttf" />
+    <Content Include="css\font-mfizz.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="index5.html" />
+    <Content Include="Index6.html" />
+    <Content Include="js\intro.min.js" />
+    <Content Include="js\moment.js" />
+    <Content Include="locationService.asmx" />
+    <Content Include="scripts\homePageScripts.js" />
+    <Content Include="scripts\homeScripts.min.js" />
+    <Content Include="scripts\success.js" />
+    <Content Include="scripts\success.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,11 +137,116 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Web.config" />
+    <Content Include="assets\beach.jpg" />
+    <Content Include="assets\bike.jpg" />
+    <Content Include="assets\city.jpg" />
+    <Content Include="assets\colors.jpg" />
+    <Content Include="assets\deer.jpg" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="img\bridge.jpg" />
+    <Content Include="img\candle.jpg" />
+    <Content Include="img\drops.jpg" />
+    <Content Include="img\hearthand.jpg" />
+    <Content Include="img\josh-calabrese-527813.jpg" />
+    <Content Include="img\justin-bisson-beck-192842.jpg" />
+    <Content Include="img\lantern.jpg" />
+    <Content Include="img\nyc.jpg" />
+    <Content Include="img\road.jpg" />
+    <Content Include="img\spiderweb.jpg" />
+    <Content Include="img\sticker-mule-199257.jpg" />
+    <Content Include="img\wall.jpg" />
+    <Content Include="img\waterfall.jpg" />
+    <Content Include="img\woman-camera.jpg" />
+    <Content Include="img\workshop.jpeg" />
+    <Content Include="index.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\flip.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\wow.js" />
+    <Content Include="Register.aspx" />
+    <Content Include="Registration.aspx" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-3.3.1.min.js" />
+    <Content Include="css\styles.css" />
+    <Content Include="scripts\validate.min.js" />
+    <Content Include="scripts\validateHomeFields.js" />
+    <Content Include="scripts\validatescripts.js" />
+    <Content Include="services.asmx" />
+    <Content Include="Success.aspx" />
+    <Content Include="success.css" />
+    <Content Include="Sucess.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="charts\userVisits.aspx.cs">
+      <DependentUpon>userVisits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="charts\userVisits.aspx.designer.cs">
+      <DependentUpon>userVisits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataServices\SiteVisitor.cs" />
+    <Compile Include="DataServices\storeSiteVisitor.cs" />
+    <Compile Include="DataServices\twitter.cs" />
+    <Compile Include="DataServices\weather.cs" />
+    <Compile Include="flipTest.aspx.cs">
+      <DependentUpon>flipTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="flipTest.aspx.designer.cs">
+      <DependentUpon>flipTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="locationService.asmx.cs">
+      <DependentUpon>locationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services.asmx.cs">
+      <DependentUpon>services.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\GetTrends.cs" />
+    <Compile Include="Services\GetUserLocation.cs" />
+    <Compile Include="Services\Subscription.cs" />
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sucess.aspx.cs">
+      <DependentUpon>Sucess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sucess.aspx.designer.cs">
+      <DependentUpon>Sucess.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
